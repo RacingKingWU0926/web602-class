@@ -1,0 +1,24 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+    //- Bootstrap
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css')
+    script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js')
+    script(src='hhttps://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js')
+
+  body
+    block content
+      h1= title
+      .signin
+        form(method="post", action="/signin")
+          .form-group
+            label(for="username") Username
+            input(type="text", class="form-control", id="username", name="username", required)
+          .form-group
+            label(for="password") Password
+            input(type="password", class="form-control", id="password", name="password", required)
+
+          button(type="submit", class="btn btn-primary", value="Sign In") Sign In
