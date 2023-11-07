@@ -4,11 +4,11 @@ let Monster = class Monster {
         this.type = type;
         this.color = color;
         this.element = element;
-        this.isScary = isScary;
+        this.isScary = isScary ? " scary " : " ";
     }
 
     roar() {
-        console.log(`The ${this.isScary()} ${this.color} ${this.type} lets out a tremendous roar!`);
+        console.log(`The${this.isScary}${this.color} ${this.type} lets out a tremendous roar!`);
     }
 
     fly() {
@@ -23,9 +23,6 @@ let Monster = class Monster {
         console.log(`The ${this.color} ${this.element} ${this.type} growls like a huge lightning thunder!`);
     }
 
-    get isScary() {
-        return this.isScary ? "scary" : ""
-    }
   }
 
 
