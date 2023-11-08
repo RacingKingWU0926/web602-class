@@ -1,0 +1,19 @@
+// Add "nav" before {.
+// After you are done, run `npm run scss css/sass-demo2.scss`.
+// This will generate `sass-demo2.css`.
+// Link this stylesheet to `sass-demo2.html`.
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+  }
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
