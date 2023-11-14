@@ -1,7 +1,7 @@
 //Using variables
-$r: 0;
-$g: 0;
-$b: 0;
+@r: 0;
+@g: 0;
+@b: 0;
 
 //Using @extend
 .globalstyle {
@@ -10,10 +10,10 @@ $b: 0;
     line-height:1.5;
 }
 html {
-    @extend .globalstyle;
+    &:extend(.globalstyle);
 }
 body {
-    @extend .globalstyle;
+    &:extend(.globalstyle);
 }
 
 //Using nesting
@@ -57,7 +57,7 @@ body {
         }
     }
     .card-shadow:hover {
-        box-shadow: 0 4px 10px 0 rgba($r, $g, $b, 0.2), 0 4px 20px 0 rgba($r, $g, $b, 0.19)
+        box-shadow: 0 4px 10px 0 rgba(@r, @g, @b, 0.2), 0 4px 20px 0 rgba(@r, @g, @b, 0.19)
     }
     .card-header {
         color: #fff !important;
